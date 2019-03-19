@@ -1,0 +1,14 @@
+/*C3*/SET SCHEMA PUBLIC
+drop table hotel_booking if exists
+drop sequence hibernate_sequence if exists
+create sequence hibernate_sequence start with 1 increment by 1
+create table hotel_booking (id bigint not null, name_hotel varchar(255), number_of_days integer not null, price_for_day double not null, primary key (id))
+INSERT INTO HOTEL_BOOKING VALUES(1,'Marriot',5,250.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(2,'Grand Hotel',3,150.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(3,'Versal',6,350.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(4,'Catalina Hotel',14,80.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(5,'Apollo',6,200.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(6,'Colonel Hotel',8,120.0E0)
+INSERT INTO HOTEL_BOOKING VALUES(7,'Aphrodite',4,220.0E0)
+ALTER SEQUENCE PUBLIC.HIBERNATE_SEQUENCE RESTART WITH 8
+COMMIT
